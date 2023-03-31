@@ -14,6 +14,7 @@ from pathlib import Path
 import urllib.parse
 import datetime
 import os
+from decouple import config 
 # from rest_framework import pagination
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -26,7 +27,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-axjy44@@e8ie9#e)+boqflhj2r)b9!avf=(^vko(10ye&y^h-j'
+SECRET_KEY = config("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
